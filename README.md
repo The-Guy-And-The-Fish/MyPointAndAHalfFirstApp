@@ -1,1 +1,1 @@
-- Need info regarding of what to do next.
+- Need info on what to do next.

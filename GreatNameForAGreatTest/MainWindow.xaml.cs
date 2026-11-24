@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,13 +28,15 @@ namespace GreatNameForAGreatTest
 
         private void GreetingsBTN_Click(object sender, RoutedEventArgs e)
         {
+            int currhour = DateTime.Now.Hour;
             string name = NameTxt.Text;
+            string greetass = currhour > 15 ? "Have a good evening" : "Have a good day";
             if (name == "")
             {
                 WelcomeTxt.Text = "Enter Your Name!";
                 return;
             }
-            WelcomeTxt.Text = $"Hello {name}!";
+                WelcomeTxt.Text = $"{greetass}, {name}!";
         }
 
         private void OpenBTN_Click(object sender, RoutedEventArgs e)
